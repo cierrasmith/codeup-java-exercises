@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class ControlFlowExercises {
 
     public static void main(String[] args) {
@@ -51,20 +53,32 @@ public class ControlFlowExercises {
 //        }
 
         //2. Fizzbuzz
-        for (int i = 0; i <= 100; i++) {
-            if (i % 3 == 0 && i % 5 == 0) {
-                System.out.println("FizzBuzz");
-            }
+//        for (int i = 0; i <= 100; i++) {
+//            if (i % 3 == 0 && i % 5 == 0) {
+//                System.out.println("FizzBuzz");
+//            }
+//
+//            else if (i % 3 == 0) { //
+//                System.out.println("Fizz");
+//
+//            }else if (i % 5 == 0) {
+//                System.out.println("Buzz");
+//
+//            } else {
+//                System.out.println(i);
+//            }
+//        }
 
-            else if (i % 3 == 0) { //
-                System.out.println("Fizz");
+        //3. Display a table of powers
+        Scanner scanner = new Scanner(System.in);
 
-            }else if (i % 5 == 0) {
-                System.out.println("Buzz");
+        System.out.print("Please enter an integer: ");
+        int usersInteger = scanner.nextInt();
 
-            } else {
-                System.out.println(i);
-            }
+        System.out.println("Below is your table!");
+        for (int i = 1; i <= usersInteger; i++) {
+            System.out.println(i);
         }
+
     }
 }
