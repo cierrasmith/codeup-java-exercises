@@ -31,7 +31,7 @@ public class HelloPolaris {
 
         String name = "Cierra Smith";
 
-        String criminalMindsQuote = "\"Some cheese quote\" \n - Probably Mark Twain"; // \n is a new line character
+        String criminalMindsQuote = "\"Some cheesy quote\" \n - Probably Mark Twain"; // \n is a new line character
         System.out.println(criminalMindsQuote);
 
         String rockNRoll = "\t\\m/"; // \t is the tab character
