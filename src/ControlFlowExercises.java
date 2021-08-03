@@ -75,10 +75,22 @@ public class ControlFlowExercises {
         System.out.print("Please enter an integer: ");
         int usersInteger = scanner.nextInt();
 
-        System.out.println("Below is your table!");
-        for (int i = 1; i <= usersInteger; i++) {
-            System.out.println(i);
+        System.out.print("Would you like to continue? ");
+        boolean userRespondedWithYes = scanner.next().toLowerCase().contains("y");
+
+
+        if (userRespondedWithYes) {
+            System.out.println("\nGreat, we will continue.");
+            System.out.println("\nBelow is your table!\n");
+            System.out.println("number | squared | cubed \n------ | ------- | -----");
+            for (int i = 1; i <= usersInteger; i++) {
+                System.out.println(i + "\t   | " + i * i + "\t     | " + i * i * i);
+            }
+        }else{
+            System.out.println("No problem, we won't continue");
         }
+
+
 
     }
 }
