@@ -48,7 +48,11 @@ public class ControlFlowExercises {
 //            System.out.println(i);
 //        }
 
-//        for (long i = 2; i < 1000000 ; i*=i) {
+//        for (int i = 100; i >= -10 ; i+=5) {
+//            System.out.println(i);
+//        }
+
+//        for (long i = 2L; i < 1000000L ; i*=i) {  // Good practice to use L when using long
 //            System.out.println(i);
 //        }
 
@@ -61,7 +65,9 @@ public class ControlFlowExercises {
 //            else if (i % 3 == 0) { //
 //                System.out.println("Fizz");
 //
-//            }else if (i % 5 == 0) {
+//            }
+//
+//            else if (i % 5 == 0) {
 //                System.out.println("Buzz");
 //
 //            } else {
@@ -84,6 +90,16 @@ public class ControlFlowExercises {
 //            System.out.println("\nBelow is your table!\n");
 //            System.out.println("number | squared | cubed \n------ | ------- | -----");
 //            for (int i = 1; i <= usersInteger; i++) {
+
+                    // This is how Ry did it, looks much cleaner than mine
+//                    System.out.printf("%-6d", i);
+//                    System.out.print(" | ");
+//                    System.out.printf("%-7d", i * i);
+//                    System.out.print(" | ");
+//                    System.out.print(i * i * i);
+//                    System.out.println();
+
+                    // This is mine
 //                System.out.println(i + "\t   | " + i * i + "\t     | " + i * i * i);
 //            }
 //        }else{
