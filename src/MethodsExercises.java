@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class MethodsExercises {
 
     //1. Basic arithmetic
@@ -21,6 +23,23 @@ public class MethodsExercises {
         return num1 % num2;
     }
 
+    //2. Create a method that validates that user input is in a certain range
+
+    public static int getInteger(int min, int max) {
+        System.out.print("Enter a number between 1 and 10: ");
+        Scanner scanner = new Scanner(System.in);
+        int userInput = scanner.nextInt();
+        if (userInput >= min && userInput <= max) {
+            System.out.println(userInput + " is in the range!");
+        } else {
+            System.out.println(userInput + " is not in the range, try again.");
+            return getInteger(min, max);
+        }
+        return userInput;
+    }
+
+
+
 
     public static void main(String[] args) {
 
@@ -33,6 +52,9 @@ public class MethodsExercises {
         System.out.println(division(10, 2));
 
         System.out.println(modulus(12, 8));
+
+        System.out.println(getInteger(1, 10));
+
 
 
     }
