@@ -38,6 +38,21 @@ public class MethodsExercises {
         return userInput;
     }
 
+    //3. Calculate the factorial of the number
+
+
+    public static int getFactorialNum(int n) {
+
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Enter Number between 1 and 10: ");
+
+        int result = scanner.nextInt();
+        for (int i = 1; i <= n; i++) {
+            result = result * i;
+        }
+        return result;
+
+    }
 
 
 
@@ -54,6 +69,10 @@ public class MethodsExercises {
         System.out.println(modulus(12, 8));
 
         System.out.println(getInteger(1, 10));
+
+        getFactorialNum(4);
+
+
 
 
 
