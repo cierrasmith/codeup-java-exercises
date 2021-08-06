@@ -15,18 +15,17 @@ public class Input {
     public boolean yesNo() {
         System.out.println("Would you like to continue, yes or no? ");
         boolean userSaidYes = scanner.next().toLowerCase().contains("y");
-        System.out.println(userSaidYes);
+
         if (userSaidYes) {
             return true;
         } else {
             return false;
         }
-
     }
 
 
-
     public int getInt(int min, int max) {
+        System.out.println("Please enter an integer between 0 and 15: ");
         int userInput = scanner.nextInt();
         if (userInput >= min && userInput <= max) {
             System.out.println(userInput + " is in the range!");
@@ -38,13 +37,14 @@ public class Input {
     }
 
     public int getInt() {
-        System.out.print("Please enter an integer: ");
+        System.out.print("Please enter any integer: ");
         int usersInteger = scanner.nextInt();
         return usersInteger;
     }
 
     public double getDouble(double min, double max) {
-        int userInput = scanner.nextInt();
+        System.out.println("Please enter a number with a decimal between -10.5 and 10.5: ");
+        double userInput = scanner.nextDouble();
         if (userInput >= min && userInput <= max) {
             System.out.println(userInput + " is in the range!");
         } else {
@@ -55,23 +55,13 @@ public class Input {
     }
 
     public double getDouble() {
+        System.out.println("Please enter any number with a decimal: ");
         double userDoubleInput = scanner.nextDouble();
         return userDoubleInput;
-
     }
 
 }
 
-class InputTest {
-    public static void main(String[] args) {
-        Input input = new Input();
-        input.getString();
-        System.out.println(input.yesNo());
-        input.getInt(0, 15);
-        input.getInt();
-        input.getDouble(-10.10, 10.10);
-        input.getDouble();
-    }
-}
+
 
 
