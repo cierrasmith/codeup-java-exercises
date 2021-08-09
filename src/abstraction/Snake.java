@@ -2,6 +2,10 @@ package abstraction;
 
 public class Snake extends Animal {
 
+    public Snake(String animalName) {
+        super(animalName);
+    }
+
     @Override
     public void walk() {
         System.out.println("Slowly slithers");
@@ -9,10 +13,10 @@ public class Snake extends Animal {
 
     @Override
     public void makeSound() {
-        System.out.println("Hissss");
+        System.out.println("Hisssss");
     }
 
     public void injectVenom() {
-        System.out.println("Heading the hospital");
+        System.out.println("Heading to the hospital");
     }
 }
