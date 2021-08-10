@@ -25,12 +25,12 @@ public class Input {
 
 
     public int getInt(int min, int max) {
-        System.out.println("Please enter an integer between 0 and 15: ");
+//        System.out.println("Please enter an integer between 0 and 15: ");
         int userInput = scanner.nextInt();
         if (userInput >= min && userInput <= max) {
-            System.out.println(userInput + " is in the range!");
+//            System.out.println(userInput + " is in the range!");
         } else {
-            System.out.println(userInput + " is not in the range, try again.");
+            System.out.println("Select another option."); // Changed for Movie app exercise
             return getInt(min, max);
         }
         return userInput;
