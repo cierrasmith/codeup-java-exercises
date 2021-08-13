@@ -7,7 +7,7 @@ public class Input {
     private Scanner scanner = new Scanner(System.in);
 
     public String getString() {
-        System.out.println("Please enter a string: ");
+//        System.out.println("Please enter a string: ");
         String userString = scanner.next();
         return userString;
     }
@@ -25,12 +25,21 @@ public class Input {
 
 
     public int getInt(int min, int max) {
-//        System.out.println("Please enter an integer between 0 and 15: ");
-        int userInput = scanner.nextInt();
+        System.out.println("Please enter an integer between 0 and 15: ");
+        // Ry's way for the Exception exercise
+        int userInput;
+
+        try {
+            userInput = Integer.valueOf(this.getString());
+        } catch (NumberFormatException e) {
+            System.out.println("Sorry, that is not an integer between 0 and 15.");
+            return getInt(min, max);
+        }
+
         if (userInput >= min && userInput <= max) {
 //            System.out.println(userInput + " is in the range!");
         } else {
-            System.out.println("Select another option."); // Changed for Movie app exercise
+            System.out.println("Sorry, that is not an integer between 0 and 15.");
             return getInt(min, max);
         }
         return userInput;
@@ -38,8 +47,15 @@ public class Input {
 
     public int getInt() {
         System.out.print("Please enter any integer: ");
-        int usersInteger = scanner.nextInt();
-        return usersInteger;
+        String s = getString();
+
+        try {
+            return Integer.valueOf(s);
+        } catch (NumberFormatException e) {
+            System.out.println("Sorry, that is not an integer.");
+            return getInt();
+        }
+//        int usersInteger = scanner.nextInt();
     }
 
     public double getDouble(double min, double max) {
@@ -56,10 +72,37 @@ public class Input {
 
     public double getDouble() {
         System.out.println("Please enter any number with a decimal: ");
-        double userDoubleInput = scanner.nextDouble();
-        return userDoubleInput;
+        String s = getString();
+
+        try {
+            return Double.parseDouble(s);
+        } catch (NumberFormatException e) {
+            System.out.println("Sorry, that is not a number with a decimal.");
+            return getDouble();
+        }
+//        double userDoubleInput = scanner.nextDouble();
+//        return userDoubleInput;
     }
 
+    public int getBinary() {
+        System.out.println("Enter a binary number: ");
+        try {
+            return Integer.valueOf(this.getString(), 2);
+        } catch (NumberFormatException e) {
+            System.out.println("That is not a binary number.");
+            return getBinary();
+        }
+    }
+
+    public int getHex() {
+        System.out.println("Enter a hexadecimal: ");
+        try {
+            return Integer.valueOf(this.getString(), 16);
+        } catch (NumberFormatException e) {
+            System.out.println("That is not a hexadecimal.");
+            return getHex();
+        }
+    }
 }
 
 
