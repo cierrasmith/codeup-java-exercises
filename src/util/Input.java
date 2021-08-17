@@ -25,7 +25,7 @@ public class Input {
 
 
     public int getInt(int min, int max) {
-        System.out.println("Please enter an integer between 0 and 15: ");
+//        System.out.println("Please enter an integer between 0 and 15: ");
         // Ry's way for the Exception exercise
         int userInput;
 
