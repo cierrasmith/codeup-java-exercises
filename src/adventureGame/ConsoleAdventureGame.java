@@ -61,7 +61,6 @@ public class ConsoleAdventureGame {
                 break;
             case 2:
                 System.out.println("Your health has increased by 10.");
-                System.out.println(menuOptions());
                 break;
             case 3:
                 System.out.println("Maybe next time.");
@@ -116,6 +115,8 @@ public class ConsoleAdventureGame {
             System.out.println(menuOptions());
             runUserOption(promptUser());
             runAttackOption(promptUser());
+        } else {
+            System.out.println("Okay, see you later!");
         }
 
 

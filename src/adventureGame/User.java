@@ -7,7 +7,16 @@ public class User {
     private Attack currentAttack;
 
     void useWeapon() {
-        System.out.println("User has attacked with this weapon and it has " + this.getCurrentAttack().getDamage() + " damage.");
+        System.out.println("Wow, nice " + this.getCurrentAttack().getDamageType() + " attack!");
+        System.out.println("You're on your way to taking down the enemy with those " + this.getCurrentAttack().getDamage() + " damage points!");
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public void setHealth(int health) {
+        this.health = health;
     }
 
     public Attack getCurrentAttack() {
