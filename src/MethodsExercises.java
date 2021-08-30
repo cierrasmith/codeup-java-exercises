@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class MethodsExercises {
 
     //1. Basic arithmetic
+
     public static int addition(int num1, int num2) {
         return num1 + num2;
     }
@@ -26,7 +27,7 @@ public class MethodsExercises {
     //2. Create a method that validates that user input is in a certain range
 
     public static int getInteger(int min, int max) {
-        System.out.print("Enter a number between 1 and 10: ");
+//        System.out.print("Enter a number between 1 and 10: ");
         Scanner scanner = new Scanner(System.in);
         int userInput = scanner.nextInt();
         if (userInput >= min && userInput <= max) {
@@ -39,7 +40,6 @@ public class MethodsExercises {
     }
 
     //3. Calculate the factorial of the number
-
 
     public static int getFactorialNum(int n) {
 
@@ -54,6 +54,33 @@ public class MethodsExercises {
 
     }
 
+    //4.  Create an application that simulates dice rolling
+
+    public static int getRandomNumber(int min, int max) {
+        return (int) ((Math.random() * (max - min)) + min);
+    }
+
+    // fix this one
+    public static void rollDice(){
+        Scanner userInput = new Scanner(System.in);
+        System.out.println("Enter the number of sides for a pair of dice: ");
+
+        int numberOfSide = getInteger(2,20);
+
+        int firstRoll = getRandomNumber(1,numberOfSide);
+        int secondRoll = getRandomNumber(1,numberOfSide);
+
+        System.out.printf("first Die ==> %d\nsecond Die ==> %d\n",firstRoll,secondRoll);
+
+        System.out.println("Would you like to continue?");
+        String usersResponse = userInput.nextLine();
+        boolean doesUserWantToContinue = usersResponse.toLowerCase().contains("y");
+
+        if (doesUserWantToContinue){
+            rollDice();
+        }
+
+    }
 
 
     public static void main(String[] args) {
@@ -72,7 +99,7 @@ public class MethodsExercises {
 
         getFactorialNum(4);
 
-
+        rollDice();
 
 
 
